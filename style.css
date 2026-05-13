@@ -167,9 +167,33 @@ p {
 .dark h2,
 .dark h3 { color: white; }
 
-.dark p { color: rgba(255,255,255,.74); }
+.dark p { color: rgba(255,255,255,.78); }
 
 .soft { background: var(--soft); }
+
+.services-bg {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(rgba(6, 31, 69, 0.92), rgba(6, 31, 69, 0.92)),
+    url("./background.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.services-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(6, 31, 69, 0.18);
+  z-index: 0;
+}
+
+.services-bg .container {
+  position: relative;
+  z-index: 2;
+}
 
 .cards-4 {
   display: grid;
@@ -186,8 +210,9 @@ p {
 }
 
 .dark-card {
-  background: rgba(255,255,255,.08);
-  border-color: rgba(255,255,255,.12);
+  background: rgba(255,255,255,.10);
+  border-color: rgba(255,255,255,.18);
+  backdrop-filter: blur(8px);
 }
 
 .card span {
@@ -200,6 +225,10 @@ p {
   font-size: 21px;
   margin: 12px 0;
   color: var(--blue);
+}
+
+.dark-card h3 {
+  color: white;
 }
 
 .card p {
@@ -294,5 +323,13 @@ footer {
 
   .logo {
     width: 180px;
+  }
+
+  h1 {
+    font-size: 42px;
+  }
+
+  .services-bg {
+    background-position: center;
   }
 }
