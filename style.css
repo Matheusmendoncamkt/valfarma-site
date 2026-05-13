@@ -335,52 +335,103 @@ footer {
 }
 /* WHATSAPP FLUTUANTE */
 
-.floating-whatsapp {
+.floating-whatsapp{
   position: fixed;
-  right: 20px;
-  bottom: 20px;
+  right: 18px;
+  bottom: 18px;
   z-index: 9999;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 8px;
-  max-height: 80vh;
-  overflow-y: auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.seller-btn {
+.seller-btn{
+  width: 52px;
+  height: 52px;
+
+  border-radius: 50%;
+
+  background: #25D366;
+
   display: flex;
   align-items: center;
-  gap: 8px;
-  background: #25d366;
-  color: white;
+  justify-content: center;
+
+  position: relative;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,.22);
+
+  transition: .25s ease;
+
   text-decoration: none;
-  padding: 10px 14px;
-  border-radius: 999px;
-  box-shadow: 0 8px 22px rgba(0,0,0,.22);
-  font-weight: 700;
-  font-size: 13px;
-  white-space: nowrap;
 }
 
-.seller-btn::before {
-  content: "☎";
-  font-size: 14px;
+.seller-btn::before{
+  content: "";
+
+  width: 24px;
+  height: 24px;
+
+  background-image: url("https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg");
+
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  filter: brightness(0) invert(1);
 }
 
-.seller-btn:hover {
+.seller-btn:hover{
+  transform: translateY(-4px) scale(1.05);
   background: #1ebe5d;
-  transform: translateY(-2px);
 }
 
-@media (max-width: 768px) {
-  .floating-whatsapp {
-    right: 10px;
-    bottom: 10px;
-    max-height: 70vh;
+.seller-tooltip{
+  position: absolute;
+
+  right: 68px;
+
+  background: #061f45;
+  color: white;
+
+  padding: 10px 14px;
+
+  border-radius: 12px;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  white-space: nowrap;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transform: translateX(10px);
+
+  transition: .25s ease;
+}
+
+.seller-btn:hover .seller-tooltip{
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+@media (max-width: 768px){
+
+  .floating-whatsapp{
+    right: 12px;
+    bottom: 12px;
+    gap: 8px;
   }
 
-  .seller-btn {
-    padding: 9px 12px;
-    font-size: 12px;
+  .seller-btn{
+    width: 46px;
+    height: 46px;
   }
+
+  .seller-tooltip{
+    display: none;
+  }
+
 }
