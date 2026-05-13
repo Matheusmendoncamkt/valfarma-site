@@ -435,3 +435,66 @@ footer {
   }
 
 }
+/* CARROSSEL DE MARCAS */
+
+.brand-carousel {
+  background: #061f45;
+  border-top: 1px solid rgba(255,255,255,.08);
+  border-bottom: 1px solid rgba(255,255,255,.08);
+  overflow: hidden;
+  padding: 18px 0;
+}
+
+.brand-track {
+  display: flex;
+  align-items: center;
+  gap: 46px;
+  width: max-content;
+  animation: scrollBrands 28s linear infinite;
+}
+
+.brand-track:hover {
+  animation-play-state: paused;
+}
+
+.brand-track img {
+  height: 46px;
+  width: auto;
+  max-width: 150px;
+  object-fit: contain;
+  filter: grayscale(1) brightness(0) invert(1);
+  opacity: .78;
+  transition: .25s ease;
+}
+
+.brand-track img:hover {
+  filter: none;
+  opacity: 1;
+  transform: scale(1.08);
+}
+
+@keyframes scrollBrands {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .brand-carousel {
+    padding: 14px 0;
+  }
+
+  .brand-track {
+    gap: 30px;
+    animation-duration: 20s;
+  }
+
+  .brand-track img {
+    height: 34px;
+    max-width: 110px;
+  }
+}
