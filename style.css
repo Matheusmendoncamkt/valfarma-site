@@ -262,7 +262,19 @@ p {
 }
 
 .contact {
-  background: linear-gradient(180deg, white, var(--soft));
+  position: relative;
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      rgba(244,247,251,.92),
+      rgba(244,247,251,.92)
+    ),
+    url("./parceria-bg.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .contact-card {
