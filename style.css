@@ -605,3 +605,20 @@ footer {
     padding: 60px 0;
   }
 }
+/* BOTÃO BLOG MENU */
+
+.blog-menu-btn{
+  padding: 10px 18px;
+  border-radius: 999px;
+
+  background: rgba(255,255,255,.08);
+
+  border: 1px solid rgba(255,255,255,.12);
+
+  transition: .3s ease;
+}
+
+.blog-menu-btn:hover{
+  background: var(--red);
+  transform: translateY(-2px);
+}
