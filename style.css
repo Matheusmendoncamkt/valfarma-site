@@ -644,3 +644,55 @@ footer {
     display: none;
   }
 }
+/* MENU MOBILE */
+
+.menu-toggle,
+.menu-icon {
+  display: none;
+}
+
+@media (max-width: 900px) {
+
+  .nav {
+    position: relative;
+  }
+
+  .menu-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 34px;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  .menu {
+    position: absolute;
+    top: 84px;
+    left: 0;
+    width: 100%;
+    background: #061f45;
+    display: none;
+    flex-direction: column;
+    padding: 24px 20px;
+    gap: 18px;
+    border-top: 1px solid rgba(255,255,255,.12);
+    box-shadow: 0 18px 40px rgba(0,0,0,.25);
+  }
+
+  .menu a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: 700;
+  }
+
+  .menu-toggle:checked ~ .menu {
+    display: flex;
+  }
+
+  .btn-small {
+    display: none;
+  }
+}
