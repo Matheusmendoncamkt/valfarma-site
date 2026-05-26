@@ -16,11 +16,33 @@ html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Arimo", Helvetica, sans-serif;
   color: var(--text);
   background: var(--white);
 }
+/* FONTES */
 
+h1 {
+  font-family: "Racing Sans One", sans-serif;
+  letter-spacing: .01em;
+}
+
+h2,
+.card h3,
+.blog-card h3,
+.article-container h2 {
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: .03em;
+}
+
+p,
+li,
+nav a,
+.btn,
+.btn-outline,
+.article-container p {
+  font-family: "Arimo", Arial, sans-serif;
+}
 .container {
   width: min(1120px, calc(100% - 40px));
   margin: 0 auto;
