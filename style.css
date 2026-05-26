@@ -176,7 +176,7 @@ p {
   overflow: hidden;
   background:
     linear-gradient(rgba(6, 31, 69, 0.92), rgba(6, 31, 69, 0.92)),
-    url("./background.jpeg");
+    url("./background.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -290,7 +290,7 @@ p {
       rgba(244,247,251,.80),
       rgba(244,247,251,.80)
     ),
-    url("./parceria-bg.jpg");
+    url("./parceria-bg.webp");
 
   background-size: cover;
   background-position: center;
