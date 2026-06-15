@@ -168,10 +168,31 @@
       </div>
     </section>
 
-    <section id="produtos" class="section soft">
-      <div class="container two-columns">
-        <img src="./ampolas.webp" alt="Medicamentos e ampolas" class="rounded-img" loading="lazy" />
-        
+   <section id="produtos" class="section soft">
+  <div class="container two-columns">
+
+    <div class="product-carousel">
+      <img src="./ampolas.webp"
+           class="carousel-image active"
+           alt="Medicamentos e ampolas"
+           loading="lazy">
+
+      <img src="./estoque-05.webp"
+           class="carousel-image"
+           alt="Estoque Valfarma"
+           loading="lazy">
+
+      <img src="./estoque-06.webp"
+           class="carousel-image"
+           alt="Operação Valfarma"
+           loading="lazy">
+
+      <img src="./estoque-07.webp"
+           class="carousel-image"
+           alt="Distribuição hospitalar Valfarma"
+           loading="lazy">
+     
+    </div>
         <div>
           <span class="eyebrow">Produtos</span>
 
@@ -264,5 +285,23 @@
   </a>
 
 </div>
+ 
+ <script>
+  const slides = document.querySelectorAll('.carousel-image');
+  let currentSlide = 0;
+
+  setInterval(() => {
+    slides[currentSlide].classList.remove('active');
+
+    currentSlide++;
+
+    if (currentSlide >= slides.length) {
+      currentSlide = 0;
+    }
+
+    slides[currentSlide].classList.add('active');
+  }, 3500);
+</script>
+ 
 </body>
 </html>
