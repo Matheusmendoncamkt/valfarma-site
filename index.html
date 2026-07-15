@@ -91,9 +91,13 @@
   logística própria e atendimento especializado para demandas B2B.
 </p>
           <div class="hero-actions">
-            <a class="btn" href="https://wa.me/5585999810355" target="_blank">
-              Falar com o comercial
-            </a>
+            <a class="btn"
+   href="https://wa.me/5585999810355"
+   target="_blank"
+   data-seller="Ivanildo"
+   data-location="hero">
+  Falar com o comercial
+</a>
 
             <a class="btn-outline" href="#quem-somos">
               Conhecer a Valfarma
@@ -255,9 +259,13 @@
             Nossa equipe está pronta para entender sua demanda e orientar o melhor atendimento.
           </p>
 
-          <a class="btn" href="https://wa.me/5585999810355" target="_blank">
-            Chamar no WhatsApp
-          </a>
+          <a class="btn"
+   href="https://wa.me/5585999810355"
+   target="_blank"
+   data-seller="Ivanildo"
+   data-location="contato">
+  Chamar no WhatsApp
+</a>
         </div>
 
         <div class="contact-card">
@@ -278,33 +286,46 @@
 
 <div class="floating-whatsapp">
 
-  <a href="https://wa.me/5585997970026" target="_blank" class="seller-btn">
-    <span class="seller-tooltip">Emanuely</span>
-  </a>
+  <a href="https://wa.me/5585997970026"
+   target="_blank"
+   class="seller-btn"
+   data-seller="Emanuely">
+  <span class="seller-tooltip">Emanuely</span>
+</a>
 
-  <a href="https://wa.me/5585981863350" target="_blank" class="seller-btn">
-    <span class="seller-tooltip">Ingrid</span>
-  </a>
+ <a class="seller-btn"
+   href="https://wa.me/5585981863350"
+   target="_blank"
+   data-seller="Ingrid"
+   data-location="flutuante">
 
-  <a href="https://wa.me/5585997477343" target="_blank" class="seller-btn">
-    <span class="seller-tooltip">Carla</span>
-  </a>
+<a class="seller-btn"
+   href="https://wa.me/5585997477343"
+   target="_blank"
+   data-seller="Carla"
+   data-location="flutuante">
 
-  <a href="https://wa.me/5585996145762" target="_blank" class="seller-btn">
-    <span class="seller-tooltip">Renata</span>
-  </a>
+<a class="seller-btn"
+   href="https://wa.me/5585996145762"
+   target="_blank"
+   data-seller="Renata"
+   data-location="flutuante">
 
-  <a href="https://wa.me/5585998136496" target="_blank" class="seller-btn">
-    <span class="seller-tooltip">Karol</span>
-  </a>
+  <a class="seller-btn"
+   href="https://wa.me/5585998136496"
+   target="_blank"
+   data-seller="Karol"
+   data-location="flutuante">
 
-  <a href="https://wa.me/5585999810355" target="_blank" class="seller-btn">
-    <span class="seller-tooltip">Ivanildo</span>
-  </a>
+ <a class="seller-btn"
+   href="https://wa.me/5585999810355"
+   target="_blank"
+   data-seller="Ivanildo"
+   data-location="flutuante">
 
 </div>
  
- <script>
+<script>
   const slides = document.querySelectorAll('.carousel-image');
   let currentSlide = 0;
 
@@ -327,8 +348,9 @@ document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
   link.addEventListener('click', function(){
 
     gtag('event', 'click_whatsapp', {
-      event_category: 'Contato',
-      event_label: this.href
+      vendedor: this.dataset.seller || 'Não informado',
+      local: this.dataset.location || 'Não informado',
+      destino: this.href
     });
 
   });
