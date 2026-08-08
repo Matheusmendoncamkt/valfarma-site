@@ -782,3 +782,17 @@ footer {
     display: none;
   }
 }
+
+.logo-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-link .logo {
+  display: block;
+}
+
+html {
+  scroll-behavior: smooth;
+}
